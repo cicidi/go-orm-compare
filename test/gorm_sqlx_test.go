@@ -75,7 +75,7 @@ func saveBySqlx(t *testing.T, wg *sync.WaitGroup, people *model.People) {
 	defer wg.Done()
 
 	//save
-	_, err := orm.Save(*people)
+	_, err := orm.Save(people)
 	util.CheckErr(err, "save by sqlx failed")
 	//read
 	var savedPeople model.People

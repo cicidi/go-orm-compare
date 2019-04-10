@@ -19,7 +19,8 @@ var tableNameMap sync.Map
 func GetFieldNames(instance interface{}) sync.Map {
 	typeName := structs.Name(instance)
 	if _, ok := typeFieldWithTag.Load(typeName); !ok {
-		t := reflect.TypeOf(instance)
+		// this is to get type of a pointer
+		t := reflect.TypeOf(instance).Elem()
 		pairs := Pairs{}
 		for _, fieldName := range structs.Names(instance) {
 			var tagName string
