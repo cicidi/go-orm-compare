@@ -75,9 +75,9 @@ PASS
 
 
 ## Enhancement
-Finally , I choose Sqlx, and I did some enhancement in `github.com/jmoiron/sqlx`.
-   - CREATE TABLE , to create table, I can use `github.com/go-gorp/gorp` , sqlx is a derived from this project, they can share same `tagName`.
-   - ORM wrapper, when project initiation, I load all table name and fieldName into a sync.Map, so the reflection is a one-time job. So far, I don't find any issue of this design.
+In the end , I choose Sqlx in project, and I did some enhancement in `github.com/jmoiron/sqlx`.
+   - CREATE TABLE:  To create table, I use `github.com/go-gorp/gorp` , sqlx is a derived from this project, they share the same `tagName`.
+   - ORM wrapper: During project initiation, I load all table name and fieldName into a sync.Map, so the reflection is a one-time job. So far, I don't find any issue of this design.
 
 
 `GetFieldNames`  create / return all field names of a type
