@@ -62,7 +62,7 @@ PASS
 
 
 - Sql is the official JDBC library. But it need extra work for table, column mapping.
-- Sqlx provides a better coding experience, we can't do column mapping by using table, and also auto fulfill your "object", however, Sqlx doesn't support
+- Sqlx provides a better coding experience, we can do column mapping by using table, and also auto fulfill your "object", however, Sqlx doesn't support
 
     - create table
     - insert "object" with type as `interface{}`. I need to create diffent `save` func for different type of "object"
